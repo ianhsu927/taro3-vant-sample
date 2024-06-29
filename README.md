@@ -10,11 +10,11 @@
 
 ```js
 export default {
-  navigationBarTitleText: '首页',
+  navigationBarTitleText: "首页",
   usingComponents: {
-    'van-button': '../../components/vant-weapp/dist/button/index'
-  }
-}
+    "van-button": "../../components/vant-weapp/dist/button/index",
+  },
+};
 ```
 
 值得注意的是，无论是在页面还是组件中引用 vant 组件，都是在页面的 config 中进行配置引用。
@@ -30,18 +30,35 @@ const config = {
   // ...
   copy: {
     patterns: [
-      { from: 'src/components/vant-weapp/dist/wxs', to: 'dist/components/vant-weapp/dist/wxs' },
-      { from: 'src/components/vant-weapp/dist/common/style', to: 'dist/components/vant-weapp/dist/common/style' },
-      { from: 'src/components/vant-weapp/dist/common/index.wxss', to: 'dist/components/vant-weapp/dist/common/index.wxss' },
-      { from: 'src/components/vant-weapp/dist/calendar/index.wxs', to: 'dist/components/vant-weapp/dist/calendar/index.wxs' },
-      { from: 'src/components/vant-weapp/dist/calendar/utils.wxs', to: 'dist/components/vant-weapp/dist/calendar/utils.wxs' },
-      { from: 'src/components/vant-weapp/dist/calendar/calendar.wxml', to: 'dist/components/vant-weapp/dist/calendar/calendar.wxml' },
-      { from: 'src/components/vant-weapp/dist/calendar/components/month/index.wxs', to: 'dist/components/vant-weapp/dist/calendar/components/month/index.wxs' },
+      { from: "src/components/vant-weapp/dist/wxs", to: "dist/components/vant-weapp/dist/wxs" },
+      {
+        from: "src/components/vant-weapp/dist/common/style",
+        to: "dist/components/vant-weapp/dist/common/style",
+      },
+      {
+        from: "src/components/vant-weapp/dist/common/index.wxss",
+        to: "dist/components/vant-weapp/dist/common/index.wxss",
+      },
+      {
+        from: "src/components/vant-weapp/dist/calendar/index.wxs",
+        to: "dist/components/vant-weapp/dist/calendar/index.wxs",
+      },
+      {
+        from: "src/components/vant-weapp/dist/calendar/utils.wxs",
+        to: "dist/components/vant-weapp/dist/calendar/utils.wxs",
+      },
+      {
+        from: "src/components/vant-weapp/dist/calendar/calendar.wxml",
+        to: "dist/components/vant-weapp/dist/calendar/calendar.wxml",
+      },
+      {
+        from: "src/components/vant-weapp/dist/calendar/components/month/index.wxs",
+        to: "dist/components/vant-weapp/dist/calendar/components/month/index.wxs",
+      },
     ],
-    options: {
-    }
+    options: {},
   },
-}
+};
 ```
 
 ### 配置忽略 vant 的样式尺寸转换
@@ -56,10 +73,10 @@ const config = {
       pxtransform: {
         enable: true,
         config: {
-          selectorBlackList: [/van-/]
-        }
-      }
-    }
+          selectorBlackList: [/van-/],
+        },
+      },
+    },
   },
-}
+};
 ```
